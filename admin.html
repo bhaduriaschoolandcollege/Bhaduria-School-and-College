@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ভাদুরিয়া স্কুল এন্ড কলেজ, নবাবগঞ্জ, দিনাজপুর - Bhaduria School and College, Nababganj, Dinajpur</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Baloo Da 2', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            position: relative;
+            height: 50vh;
+            background-image: url('https://i.ibb.co.com/q37vpxKQ/IMG-20250919-200106.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin-top: 0;
+            text-shadow: 1px 1px 3px #000000;
+        }
+
+        .top-bar {
+            background-color: #0d47a1;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .top-bar .date-time {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .navbar {
+            background-color: #1565c0;
+            overflow: hidden;
+            border-bottom: 3px solid #0d47a1;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .navbar a:hover {
+            background-color: #0d47a1;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #0d47a1;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #1565c0;
+            display: block;
+            margin: 5px auto 0;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-header {
+            background-color: #1565c0;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .card-body .see-details {
+            display: inline-block;
+            background-color: #0d47a1;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .card-body .see-details:hover {
+            background-color: #0a3d8c;
+        }
+
+        .notice-board {
+            background-color: #e3f2fd;
+            border-left: 5px solid #1565c0;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .notice-board h2 {
+            margin-top: 0;
+            color: #0d47a1;
+        }
+
+        .notice-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .notice-item {
+            border-bottom: 1px dashed #ccc;
+            padding: 10px 0;
+        }
+
+        .notice-item:last-child {
+            border-bottom: none;
+        }
+
+        .admin-profile {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+        .admin-profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #1565c0;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .admin-profile h3 {
+            margin: 0;
+            color: #0d47a1;
+            font-size: 1.5rem;
+        }
+
+        .admin-profile p {
+            margin: 10px 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .admin-profile a {
+            color: #1565c0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .footer {
+            background-color: #1565c0;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .header p {
+                font-size: 1rem;
+            }
+            .navbar a {
+                float: none;
+                width: 100%;
+                box-sizing: border-box;
+                text-align: left;
+            }
+            .top-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="date-time" id="datetime"></div>
+        <div>যোগাযোগ: +8801934044666 or 01831087038 | ইমেল: mdsdz2025@gmail.com</div>
+    </div>
+
+    <div class="header">
+        <div class="header-content">
+            <h1>ভাদুরিয়া স্কুল এন্ড কলেজ</h1>
+            <p>নবাবগঞ্জ, দিনাজপুর</p>
+            <h1>Bhaduria School and College</h1>
+            <p>Nawabganj, Dinajpur</p>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#teachers">Teachers</a>
+        <a href="#students">Students</a>
+        <a href="#admin">Admin</a>
+        <a href="#update">Update</a>
+        <a href="#ebook">Ebook</a>
+    </div>
+
+    <div class="container">
+        
+        </div>
+        
+        <div id="admin">
+            <h2 class="section-title">Admin Panel</h2>
+
+            <div class="admin-profile">
+                <h3>Website Owner</h3>
+                <img src="https://i.ibb.co.com/NdmGMxNw/Sumon.jpg" alt="Md. Shahadat Islam Sumon">
+                <p><strong>নাম:</strong> মোঃ শাহাদত ইসলাম সুমন</p>
+                <p><strong>বর্তমান অবস্থা:</strong> অত্র বিদ্যালয়ের দ্বিতীয় বর্ষের একজন ছাত্র</p>
+                <p><strong>ঠিকানা:</strong> বাজিতপুর গ্রাম ভাদুড়িয়া, নবাবগঞ্জ, দিনাজপুর</p>
+                <p><strong>মোবাইল নাম্বার:</strong> <a href="tel:01934044666">01934044666</a> অথবা <a href="tel:01831087038">01831087038</a></p>
+                <p><strong>ইমেইল:</strong> <a href="mailto:mdsdz2025@gmail.com">mdsdz2025@gmail.com</a></p>
+                <p><strong>ফেসবুক:</strong> <a href="https://www.facebook.com/mdsumonhassan2008" target="_blank">mdsumonhassan2008</a></p>
+            </div>
+            
+            <div class="admin-profile">
+                <h3>Admin 2</h3>
+                <p>বিস্তারিত তথ্য এখানে যোগ করুন।</p>
+            </div>
+
+            <div class="admin-profile">
+                <h3>Admin 3</h3>
+                <p>বিস্তারিত তথ্য এখানে যোগ করুন।</p>
+            </div>
+            
+        </div>
+        </div>
+
+    <div class="footer">
+        <p>&copy; <span id="year"></span> Bhaduria School and College, Nababganj, Dinajpur. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+            const datetimeString = now.toLocaleDateString('bn-BD', options);
+            document.getElementById('datetime').textContent = datetimeString.replace('PM', 'পিএম').replace('AM', 'এএম');
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
+  

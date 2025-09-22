@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ক্লাস রুটিন - ভাদুরিয়া স্কুল এন্ড কলেজ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Baloo Da 2', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f8fa;
+            color: #333;
+        }
+
+        .main-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header-section {
+            padding-bottom: 20px;
+            border-bottom: 2px solid #00796b;
+            margin-bottom: 30px;
+        }
+
+        .header-section h1 {
+            color: #00796b;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            background-color: #e0f2f1;
+            border: 2px solid #00796b;
+            color: #00796b;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .tab-button.active, .tab-button:hover {
+            background-color: #00796b;
+            color: white;
+        }
+
+        .routine-section {
+            display: none; /* Hidden by default */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+            margin-top: 20px;
+        }
+        
+        .routine-section h2 {
+            font-size: 1.8rem;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        
+        .download-box {
+            background-color: #e0f7fa;
+            border: 2px dashed #00bcd4;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .download-box a {
+            display: inline-block;
+            background-color: #00838f;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-box a:hover {
+            background-color: #006064;
+            transform: translateY(-3px);
+        }
+
+        .download-box a i {
+            margin-right: 10px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .tab-button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="header-section">
+        <h1>ক্লাস রুটিন</h1>
+        <p>আপনার প্রয়োজনীয় রুটিনটি দেখতে নিচের অপশন থেকে নির্বাচন করুন।</p>
+    </div>
+
+    <div class="tab-container">
+        <button class="tab-button" onclick="showRoutine('class11-routine')">একাদশ শ্রেণীর রুটিন</button>
+        <button class="tab-button" onclick="showRoutine('class12-routine')">দ্বাদশ শ্রেণীর রুটিন</button>
+    </div>
+
+    <div id="class11-routine" class="routine-section">
+        <h2>একাদশ শ্রেণীর রুটিন</h2>
+        <div class="download-box">
+            <p>নিচের বাটনে ক্লিক করে একাদশ শ্রেণির ক্লাস রুটিন ডাউনলোড করুন।</p>
+            <a href="https://drive.google.com/file/d/14lWWo6n-nZ7yaXa_BUsMKvMdq1-pEBkt/view?usp=drivesdk" target="_blank" download>
+                <i class="fas fa-download"></i> রুটিন ডাউনলোড করুন
+            </a>
+        </div>
+    </div>
+
+    <div id="class12-routine" class="routine-section">
+        <h2>দ্বাদশ শ্রেণীর রুটিন</h2>
+        <div class="download-box">
+            <p>নিচের বাটনে ক্লিক করে দ্বাদশ শ্রেণির ক্লাস রুটিন ডাউনলোড করুন।</p>
+            <a href="https://drive.google.com/file/d/14lWWo6n-nZ7yaXa_BUsMKvMdq1-pEBkt/view?usp=drivesdk" target="_blank" download>
+                <i class="fas fa-download"></i> রুটিন ডাউনলোড করুন
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function showRoutine(routineId) {
+        const sections = document.querySelectorAll('.routine-section');
+        const buttons = document.querySelectorAll('.tab-button');
+
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        document.getElementById(routineId).style.display = 'block';
+        event.target.classList.add('active');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শিক্ষক পরিচিতি - ভাদুরিয়া স্কুল এন্ড কলেজ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Baloo Da 2', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f5e9; /* Light green-ish background */
+            color: #333;
+        }
+        
+        .main-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .header-section {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #2e7d32;
+            margin-bottom: 30px;
+        }
+
+        .header-section h1 {
+            color: #1b5e20;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .teacher-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .teacher-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .teacher-card .photo {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 4px solid #43a047;
+            margin-bottom: 15px;
+        }
+
+        .teacher-card h3 {
+            color: #1b5e20;
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .teacher-card p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .footer-note {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        @media screen and (max-width: 768px) {
+            .teacher-card .photo {
+                max-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="header-section">
+        <h1>শিক্ষক পরিচিতি</h1>
+        <p>ভাদুরিয়া স্কুল এন্ড কলেজের সম্মানিত শিক্ষকবৃন্দের তালিকা</p>
+    </div>
+
+    <div class="teacher-grid">
+        
+        <div class="teacher-card">
+            <img src="https://i.ibb.co.com/Hfm7TGpY/ICT.jpg" alt="মোহাম্মদ মোরশেদুল কবীর লাইজু" class="photo">
+            <h3>মোহাম্মদ মোরশেদুল কবীর লাইজু</h3>
+            <p><strong>বিষয়:</strong> আইসিটি</p>
+            <p><strong>মোবাইল নাম্বার:</strong> __________</p>
+            <p><strong>ঠিকানা:</strong> __________</p>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://i.ibb.co.com/y1TCxtn/image.jpg" alt="মোঃ জাহাঙ্গীর আলম চৌধুরী" class="photo">
+            <h3>মোঃ জাহাঙ্গীর আলম চৌধুরী</h3>
+            <p><strong>বিষয়:</strong> ভূগোল</p>
+            <p><strong>মোবাইল নাম্বার:</strong> __________</p>
+            <p><strong>ঠিকানা:</strong> __________</p>
+        </div>
+        
+        <div class="teacher-card">
+            <img src="https://i.ibb.co.com/LdWG5XbZ/image.jpg" alt="মোঃ মাহাবুবুর রহমান মাহবুব" class="photo">
+            <h3>মোঃ মাহাবুবুর রহমান মাহবুব</h3>
+            <p><strong>বিষয়:</strong> মনোবিজ্ঞান</p>
+            <p><strong>মোবাইল নাম্বার:</strong> __________</p>
+            <p><strong>ঠিকানা:</strong> __________</p>
+        </div>
+        
+        <div class="teacher-card">
+            <img src="https://i.ibb.co.com/s9sWDbJF/Islam.jpg" alt="মোঃ আমজাদ আলী" class="photo">
+            <h3>মোঃ আমজাদ আলী</h3>
+            <p><strong>বিষয়:</strong> ইসলাম</p>
+            <p><strong>মোবাইল নাম্বার:</strong> __________</p>
+            <p><strong>ঠিকানা:</strong> __________</p>
+        </div>
+        
+        <div class="teacher-card">
+            <img src="https://via.placeholder.com/200" alt="শিক্ষকের ছবি" class="photo">
+            <h3>শিক্ষক ৫</h3>
+            <p><strong>বিষয়:</strong> __________</p>
+            <p><strong>মোবাইল নাম্বার:</strong> __________</p>
+            <p><strong>ঠিকানা:</strong> __________</p>
+        </div>
+        
+    </div>
+
+    <p class="footer-note">আরো অনেক শিক্ষক আছেন যাদের তথ্য এখনো পাওয়া যায়নি।</p>
+
+</div>
+
+</body>
+</html>

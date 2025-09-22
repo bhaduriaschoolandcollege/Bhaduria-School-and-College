@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>গ্যালারি - ভাদুরিয়া স্কুল এন্ড কলেজ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Baloo Da 2', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .header-section {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #673ab7;
+            margin-bottom: 30px;
+        }
+
+        .header-section h1 {
+            color: #512da8;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="header-section">
+        <h1>স্মৃতিময় গ্যালারি</h1>
+        <p>ভাদুরিয়া স্কুল এন্ড কলেজের কিছু বিশেষ মুহূর্ত</p>
+    </div>
+
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="https://i.ibb.co.com/ZsjYYMd/IMG-20250921-113033.jpg" alt="ছবি ১">
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co.com/Vc9z8h1C/IMG-20250916-114235.jpg" alt="ছবি ২">
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co.com/Nd42j9hf/IMG-20250919-200106.jpg" alt="ছবি ৩">
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co.com/F1y6R7F/IMG-20250916-111303.jpg" alt="ছবি ৪">
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co.com/Lzyq18mz/Screenshot-20250919-194928.jpg" alt="ছবি ৫">
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co.com/DHrmqKZL/PXL-20250915-120457678-PHOTOSPHERE.jpg" alt="ছবি ৬">
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co.com/XxkYdYVm/Sumon.jpg" alt="ছবি ৭">
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co.com/PGNdzzjx/IMG-20250921-112834.jpg" alt="ছবি ৮">
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

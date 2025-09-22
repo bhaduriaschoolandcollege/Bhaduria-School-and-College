@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ই-বুক - ভাদুরিয়া স্কুল এন্ড কলেজ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Baloo Da 2', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            background-image: url('https://i.ibb.co/2hvz9c4/books-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        
+        .main-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-section {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #1565c0;
+            margin-bottom: 20px;
+        }
+
+        .header-section h1 {
+            color: #0d47a1;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        
+        .department-selection {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .department-selection h2 {
+            font-size: 1.8rem;
+            color: #1565c0;
+        }
+
+        .department-buttons button {
+            background-color: #1565c0;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 8px;
+            margin: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .department-buttons button:hover {
+            background-color: #0d47a1;
+            transform: scale(1.05);
+        }
+
+        .book-section {
+            display: none; /* Initially hidden */
+            margin-top: 30px;
+        }
+
+        .book-section h3 {
+            background-color: #0d47a1;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .book-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .book-item {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid #1565c0;
+        }
+
+        .book-item span {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .download-btn {
+            background-color: #009688;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #00796b;
+        }
+
+        .external-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .external-link a {
+            color: #1565c0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .external-link a:hover {
+            text-decoration: underline;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .main-container {
+                padding: 15px;
+                margin: 15px auto;
+            }
+            .department-buttons button {
+                width: 90%;
+            }
+            .book-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .book-item .download-btn {
+                margin-top: 10px;
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="header-section">
+        <h1>ই-বুক লাইব্রেরি</h1>
+        <p>ভাদুরিয়া স্কুল এন্ড কলেজ</p>
+    </div>
+
+    <div class="department-selection">
+        <h2>আপনি কোন বিভাগের?</h2>
+        <div class="department-buttons">
+            <button onclick="showBooks('science')">বিজ্ঞান</button>
+            <button onclick="showBooks('humanities')">মানবিক</button>
+        </div>
+    </div>
+
+    <div id="science-books" class="book-section">
+        <h3>📚 বিজ্ঞান বিভাগ - বইয়ের তালিকা</h3>
+        <p style="text-align:center;">যে বইগুলোর পাশে ডাউনলোড বাটন নেই সেগুলোর পিডিএফ আপাতত নেই।</p>
+        <ul class="book-list">
+            <li class="book-item">
+                <span>আবশ্যিক বিষয়সমূহ</span>
+            </li>
+            <li class="book-item">
+                <span>বাংলা প্রথম পত্র (১০১)</span>
+                <a href="https://drive.google.com/uc?export=download&id=11tNq5F0bfYFf5QexWOWAz3VlpryMlaFD" class="download-btn" target="_blank">ডাউনলোড</a>
+            </li>
+            <li class="book-item">
+                <span>বাংলা দ্বিতীয় পত্র (১০২)</span>
+                </li>
+            <li class="book-item">
+                <span>সহপাঠ</span>
+                <a href="https://drive.google.com/uc?export=download&id=1xwZ1GmHSRS5v39YMnsz84DsvAq8enGIE" class="download-btn" target="_blank">ডাউনলোড</a>
+            </li>
+            <li class="book-item">
+                <span>ইংরেজি প্রথম পত্র (১০৭)</span>
+                <a href="https://drive.google.com/uc?export=download&id=1-y3k-lzZ_uRt0673N4gW6mrDLqZQpLnE" class="download-btn" target="_blank">ডাউনলোড</a>
+            </li>
+            <li class="book-item">
+                <span>ইংরেজি দ্বিতীয় পত্র (১০৮)</span>
+                </li>
+            <li class="book-item">
+                <span>তথ্য ও যোগাযোগ প্রযুক্তি (২৭৫)</span>
+                <a href="https://drive.google.com/uc?export=download&id=16AVZQzh9LRq4_o238_bdM16jd57ZuNC8" class="download-btn" target="_blank">ডাউনলোড</a>
+            </li>
+        </ul>
+        <ul class="book-list">
+            <li class="book-item">
+                <span>বিজ্ঞান বিভাগের বিষয়সমূহ</span>
+            </li>
+            <li class="book-item">
+                <span>পদার্থবিজ্ঞান প্রথম পত্র (১৭৪)</span>
+                </li>
+            <li class="book-item">
+                <span>পদার্থবিজ্ঞান দ্বিতীয় পত্র (১৭৫)</span>
+                </li>
+            <li class="book-item">
+                <span>রসায়ন প্রথম পত্র (১৭৬)</span>
+                </li>
+            <li class="book-item">
+                <span>রসায়ন দ্বিতীয় পত্র (১৭৭)</span>
+                </li>
+            <li class="book-item">
+                <span>উচ্চতর গণিত প্রথম পত্র (২৬৫)</span>
+                </li>
+            <li class="book-item">
+                <span>উচ্চতর গণিত দ্বিতীয় পত্র (২৬৬)</span>
+                </li>
+            <li class="book-item">
+                <span>জীববিজ্ঞান প্রথম পত্র (১৭৮)</span>
+                </li>
+        </ul>
+    </div>
+
+    <div id="humanities-books" class="book-section">
+        <h3>📚 মানবিক বিভাগ - বইয়ের তালিকা</h3>
+        <p style="text-align:center;">যে বইগুলোর পাশে ডাউনলোড বাটন নেই সেগুলোর পিডিএফ আপাতত নেই।</p>
+        <ul class="book-list">
+            <li class="book-item">
+                <span>আবশ্যিক বিষয়সমূহ</span>
+            </li>
+            <li class="book-item">
+                <span>বাংলা প্রথম পত্র (১০১)</span>
+                <a href="https://drive.google.com/uc?export=download&id=11tNq5F0bfYFf5QexWOWAz3VlpryMlaFD" class="download-btn" target="_blank">ডাউনলোড</a>
+            </li>
+            <li class="book-item">
+                <span>সহপাঠ</span>
+                <a href="https://drive.google.com/uc?export=download&id=1xwZ1GmHSRS5v39YMnsz84DsvAq8enGIE" class="download-btn" target="_blank">ডাউনলোড</a>
+            </li>
+            <li class="book-item">
+                <span>বাংলা দ্বিতীয় পত্র (১০২)</span>
+                </li>
+            <li class="book-item">
+                <span>ইংরেজি প্রথম পত্র (১০৭)</span>
+                <a href="https://drive.google.com/uc?export=download&id=1-y3k-lzZ_uRt0673N4gW6mrDLqZQpLnE" class="download-btn" target="_blank">ডাউনলোড</a>
+            </li>
+            <li class="book-item">
+                <span>ইংরেজি দ্বিতীয় পত্র (১০৮)</span>
+                </li>
+            <li class="book-item">
+                <span>তথ্য ও যোগাযোগ প্রযুক্তি (২৭৫)</span>
+                <a href="https://drive.google.com/uc?export=download&id=16AVZQzh9LRq4_o238_bdM16jd57ZuNC8" class="download-btn" target="_blank">ডাউনলোড</a>
+            </li>
+        </ul>
+        <ul class="book-list">
+            <li class="book-item">
+                <span>মানবিক বিভাগের বিষয়সমূহ</span>
+            </li>
+            <li class="book-item">
+                <span>অর্থনীতি প্রথম পত্র (১০৯)</span>
+                </li>
+            <li class="book-item">
+                <span>অর্থনীতি দ্বিতীয় পত্র (১১০)</span>
+                </li>
+            <li class="book-item">
+                <span>পৌরনীতি ও সুশাসন প্রথম পত্র (২৬৯)</span>
+                </li>
+            <li class="book-item">
+                <span>পৌরনীতি ও সুশাসন দ্বিতীয় পত্র (২৭০)</span>
+                </li>
+            <li class="book-item">
+                <span>যুক্তিবিদ্যা প্রথম পত্র (১২১)</span>
+                </li>
+            <li class="book-item">
+                <span>যুক্তিবিদ্যা দ্বিতীয় পত্র (১২২)</span>
+                </li>
+            <li class="book-item">
+                <span>সমাজবিজ্ঞান প্রথম পত্র (১১৭)</span>
+                </li>
+            <li class="book-item">
+                <span>সমাজবিজ্ঞান দ্বিতীয় পত্র (১১৮)</span>
+                </li>
+            <li class="book-item">
+                <span>ইতিহাস প্রথম পত্র (৩০৪)</span>
+                </li>
+            <li class="book-item">
+                <span>ইতিহাস দ্বিতীয় পত্র (৩০৫)</span>
+                </li>
+            <li class="book-item">
+                <span>ভূগোল প্রথম পত্র (১২৫)</span>
+                </li>
+            <li class="book-item">
+                <span>ভূগোল দ্বিতীয় পত্র (১২৬)</span>
+                </li>
+            <li class="book-item">
+                <span>জীববিজ্ঞান দ্বিতীয় পত্র (১৭৯)</span>
+                </li>
+        </ul>
+    </div>
+
+    <div class="external-link">
+        <p>আরো বই পেতে নিচের ওয়েবসাইটটি ভিজিট করুন 👇</p>
+        <a href="https://nctbbook.com/hsc-book/" target="_blank">nctbbook.com</a>
+    </div>
+
+</div>
+
+<script>
+    function showBooks(department) {
+        // Hide all book sections
+        document.getElementById('science-books').style.display = 'none';
+        document.getElementById('humanities-books').style.display = 'none';
+        
+        // Show the selected book section
+        if (department === 'science') {
+            document.getElementById('science-books').style.display = 'block';
+        } else if (department === 'humanities') {
+            document.getElementById('humanities-books').style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>

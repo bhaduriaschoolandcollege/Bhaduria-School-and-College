@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আপডেট - ভাদুরিয়া স্কুল এন্ড কলেজ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Baloo Da 2', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        .main-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-section {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #1a237e;
+            margin-bottom: 30px;
+        }
+
+        .header-section h1 {
+            color: #1a237e;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            background-color: #e3f2fd;
+            border: 2px solid #1a237e;
+            color: #1a237e;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .tab-button.active, .tab-button:hover {
+            background-color: #1a237e;
+            color: white;
+        }
+
+        .update-section {
+            display: none; /* Initial state: hidden */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+
+        .update-section h2 {
+            font-size: 1.8rem;
+            color: #1a237e;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .update-section h2::after {
+            content: '✨';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .update-section .info-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .update-section .info-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .update-section img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-caption {
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+        
+        .no-update {
+            font-style: italic;
+            color: #777;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1rem;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .tab-button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="header-section">
+        <h1>গুরুত্বপূর্ণ আপডেট</h1>
+    </div>
+
+    <div class="tab-container">
+        <button class="tab-button" onclick="showUpdate('class11-updates')">একাদশ শ্রেণি আপডেট</button>
+        <button class="tab-button" onclick="showUpdate('class12-updates')">দ্বাদশ শ্রেণি আপডেট</button>
+        <button class="tab-button" onclick="showUpdate('ex-batch-updates')">এক্স ব্যাচ আপডেট</button>
+    </div>
+
+    <div id="class11-updates" class="update-section">
+        <h2>একাদশ শ্রেণির ভর্তির কার্যক্রম অব্যাহত আছে 🎓</h2>
+        <div class="info-box">
+            <p>একাদশ শ্রেণির শিক্ষার্থীদের উদ্বোধনী ক্লাস শুরু হয়ে গিয়েছে। শিক্ষার্থীদের নিয়মিত ক্লাসে অংশগ্রহণ করার জন্য নির্দেশ দেওয়া হলো।</p>
+        </div>
+        <img src="https://i.ibb.co.com/fzFSVYfr/IMG-20250907-103452.jpg" alt="একাদশ ও দ্বাদশ শ্রেণীর বিষয় ও বিষয় কোড" style="width: 100%;">
+        <p class="image-caption">একাদশ এবং দ্বাদশ শ্রেণীর বিষয় এবং বিষয় কোড সমূহ</p>
+        <p class="no-update">আপাতত আর কোন আপডেট নেই।</p>
+    </div>
+
+    <div id="class12-updates" class="update-section">
+        <h2>রেজিস্ট্রেশন সংক্রান্ত তথ্য 👇</h2>
+        <div class="info-box">
+            <p>একাদশ শ্রেণির শেষ পরীক্ষার রেজাল্ট প্রকাশিত হয়েছে। রেজাল্ট দেখতে কলেজের নোটিশ বোর্ড অনুসরণ করুন।</p>
+        </div>
+        <img src="https://i.ibb.co.com/RTQHXPzC/1758560929586.jpg" alt="দ্বাদশ শ্রেণীর আপডেট" style="width: 100%;">
+        
+        <img src="https://i.ibb.co.com/fzFSVYfr/IMG-20250907-103452.jpg" alt="একাদশ ও দ্বাদশ শ্রেণীর বিষয় ও বিষয় কোড" style="width: 100%;">
+        <p class="image-caption">দ্বাদশ শ্রেণীর বিষয় এবং বিষয় কোড সমূহ</p>
+        <p class="no-update">আপাতত কোন আপডেট পাওয়া যায়নি।</p>
+    </div>
+
+    <div id="ex-batch-updates" class="update-section">
+        <h2>🔴📝 HSC Batch 2024 এর ব্যাচের গুরুত্বপূর্ণ নোটিশ 👇</h2>
+        <img src="https://i.ibb.co.com/1YPxN3j8/1758560940071.jpg" alt="HSC Batch 2024 এর নোটিশ" style="width: 100%;">
+        <p class="no-update">আপাতত আর কোন আপডেট নেই।</p>
+    </div>
+
+</div>
+
+<script>
+    function showUpdate(sectionId) {
+        const sections = document.querySelectorAll('.update-section');
+        const buttons = document.querySelectorAll('.tab-button');
+
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        document.getElementById(sectionId).style.display = 'block';
+        event.target.classList.add('active');
+    }
+</script>
+
+</body>
+</html>

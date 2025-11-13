@@ -83,6 +83,22 @@
             font-weight: bold;
         }
 
+        /* Updated CSS for Nav Bar Blinking */
+        @keyframes strong-blinking-border {
+            0% { 
+                border-color: #ffeb3b; 
+                box-shadow: 0 0 5px #ffeb3b, 0 0 10px #fff;
+            }
+            50% { 
+                border-color: #fff; 
+                box-shadow: 0 0 10px #00ff00, 0 0 20px #0000ff;
+            }
+            100% { 
+                border-color: #ffeb3b; 
+                box-shadow: 0 0 5px #ffeb3b, 0 0 10px #fff;
+            }
+        }
+
         .navbar {
             background-color: #1565c0;
             overflow: hidden;
@@ -106,15 +122,20 @@
             overflow: hidden;
             margin: 5px;
             border-radius: 5px;
-            animation: blinking-text 1.5s infinite;
             border: 2px solid transparent;
+            animation: strong-blinking-border 2s infinite ease-in-out; /* Apply new blinking */
+        }
+        
+        /* Alternating blink for a more dynamic look */
+        .navbar a:nth-child(even) {
+            animation-delay: 1s;
         }
 
         .navbar a:hover {
             background-color: #0d47a1;
             transform: scale(1.05);
             box-shadow: 0 0 15px #fff, 0 0 20px #ffeb3b;
-            animation: none;
+            animation: none; /* Stop blinking on hover */
         }
         
         .navbar a::before {
@@ -444,6 +465,71 @@
                 flex-direction: column;
             }
         }
+        
+        /* 3D Blinking Border/Light for Special Section */
+        @keyframes blinking-3d-border {
+            0% {
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 0, 255, 0.9);
+                border-color: #00ffff;
+            }
+            25% {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 0, 255, 0.7), 0 0 30px rgba(255, 255, 0, 0.9);
+                border-color: #ff00ff;
+            }
+            50% {
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 0, 0.7), 0 0 45px rgba(0, 255, 0, 0.9);
+                border-color: #ffff00;
+            }
+            75% {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(0, 255, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.9);
+                border-color: #00ff00;
+            }
+            100% {
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 0, 255, 0.9);
+                border-color: #00ffff;
+            }
+        }
+
+        .special-announcement-section {
+            padding: 20px;
+            margin: 30px auto;
+            text-align: center;
+            background-color: #f0f8ff;
+            border: 5px solid; 
+            border-radius: 15px;
+            max-width: 90%;
+            animation: blinking-3d-border 4s infinite ease-in-out;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .special-announcement-section h2 {
+            color: #1a237e;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: blinking-3d-border 4s infinite ease-in-out;
+            padding: 10px;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 10px;
+        }
+
+        .special-announcement-section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            animation: blinking-3d-border 4s infinite ease-in-out;
+            border: 5px solid transparent; 
+        }
+
+        .special-announcement-section img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -470,7 +556,7 @@
         <a href="index.html">Home</a>
         <a href="teachers.html">Teachers</a>
         <a href="gallery.html">Gallery</a>
-        <a href="routine.html">class Routine</a>
+        <a href="routine.html">Class Routine</a>
         <a href="ubdate.html">Ubdate</a>
         <a href="ebooks.html">Ebook</a>
         <a href="#contact">Contact</a>
@@ -497,13 +583,19 @@
     <div class="notice-board">
         <h2 class="section-title">গুরুত্বপূর্ণ নোটিশ</h2>
         <ul class="notice-list">
-            <li class="notice-item">📌📝৮ তাং বুধবার থেকে কলেজ এর ক্লাস শুরু হয়েছে।</li>
+            <li class="notice-item">📌📝আগামী ২৬ সেপ্টেম্বর থেকে ৭ অক্টোবর পর্যন্ত দুর্গাপূজার বন্ধ থাকবে মোট ১২ দিন ।</li>
             <li class="notice-item">🎉 একাদশ শ্রেণির উদ্বোধনী ক্লাস ক্লাস শুরু হয়েছে</li>
             <li class="notice-item">📝একাদশ শ্রেণির ভর্তি কার্যক্রম এখনো অব্যাহত আছে</li>
             <li class="notice-item">বিভিন্ন আপডেট পেতে Ubdate অপশনে ক্লিক করে দেখে নাও🔴</li>
         </ul>
     </div>
-
+    
+    <div class="special-announcement-section">
+        <h2>এইচএসসি ২০২৬ পরীক্ষার্থীদের জন্য বিশেষ ঘোষণা</h2>
+        <a href="https://ibb.co.com/zW64B3Kq" target="_blank">
+            <img src="https://i.ibb.co.com/7xk1Z37s/received-805712515781713-2.jpg" alt="এইচএসসি ২০২৬ পরীক্ষার্থীদের জন্য বিশেষ ঘোষণা" border="0">
+        </a>
+    </div>
     <div class="container">
         
         <h2 class="section-title" id="home">আমাদের সম্পর্কে</h2>
@@ -595,122 +687,120 @@
 
         function updateSlider() {
             sliderImages.style.transform = `translateX(${-currentImageIndex * 100}%)`;                    
-   }
+        }
 
-    function autoSlide() {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        updateSlider();
-    }
-
-    function startAutoSlide() {
-        autoSlideInterval = setInterval(autoSlide, 5000); // 5 seconds
-    }
-
-    function stopAutoSlide() {
-        clearInterval(autoSlideInterval);
-    }
-
-    prevBtn.addEventListener('click', () => {
-        stopAutoSlide();
-        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        updateSlider();
-        startAutoSlide(); // Restart auto-slide
-    });
-
-    nextBtn.addEventListener('click', () => {
-        stopAutoSlide();
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        updateSlider();
-        startAutoSlide(); // Restart auto-slide
-    });
-
-    // Touch/Swipe functionality for mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    sliderImages.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-        stopAutoSlide();
-    });
-
-    sliderImages.addEventListener('touchmove', (e) => {
-        touchEndX = e.touches[0].clientX;
-    });
-
-    sliderImages.addEventListener('touchend', () => {
-        if (touchEndX < touchStartX) {
-            // Swiped left
+        function autoSlide() {
             currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateSlider();
         }
-        if (touchEndX > touchStartX) {
-            // Swiped right
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(autoSlide, 5000); // 5 seconds
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        prevBtn.addEventListener('click', () => {
+            stopAutoSlide();
             currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        }
-        updateSlider();
+            updateSlider();
+            startAutoSlide(); // Restart auto-slide
+        });
+
+        nextBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateSlider();
+            startAutoSlide(); // Restart auto-slide
+        });
+
+        // Touch/Swipe functionality for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        sliderImages.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            stopAutoSlide();
+        });
+
+        sliderImages.addEventListener('touchmove', (e) => {
+            touchEndX = e.touches[0].clientX;
+        });
+
+        sliderImages.addEventListener('touchend', () => {
+            if (touchEndX < touchStartX) {
+                // Swiped left
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+            }
+            if (touchEndX > touchStartX) {
+                // Swiped right
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            }
+            updateSlider();
+            startAutoSlide();
+        });
+
         startAutoSlide();
-    });
 
-    startAutoSlide();
-
-    // Update gallery title with today's date
-    function updateGalleryTitle() {
-        const now = new Date();
-        const dateOptions = {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric'
-        };
-        const dateString = now.toLocaleDateString('bn-BD', dateOptions);
-        const title = `একাদশ এবং দ্বাদশ শ্রেণীর ফুটবল খেলায় দ্বাদশ শ্রেণীর বিজয় এর সময়ের কিছু স্মৃতিময় মুহূর্ত, ${dateString}`;
-        document.getElementById('slider-title').textContent = title;
-    }
-
-    updateGalleryTitle();
-
-    function toggleDetails() {
-        const shortText = document.querySelector('.short-text');
-        const fullText = document.querySelector('.full-text');
-        const button = document.querySelector('.see-details');
-        
-        if (fullText.style.display === 'none' || fullText.style.display === '') {
-            shortText.style.display = 'none';
-            fullText.style.display = 'block';
-            button.textContent = 'Hide Details';
-        } else {
-            shortText.style.display = 'block';
-            fullText.style.display = 'none';
-            button.textContent = 'See Details';
+        // Update gallery title with today's date
+        function updateGalleryTitle() {
+            const now = new Date();
+            const dateOptions = {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            };
+            const dateString = now.toLocaleDateString('bn-BD', dateOptions);
+            const title = `একাদশ এবং দ্বাদশ শ্রেণীর ফুটবল খেলায় দ্বাদশ শ্রেণীর বিজয় এর সময়ের কিছু স্মৃতিময় মুহূর্ত, ${dateString}`;
+            document.getElementById('slider-title').textContent = title;
         }
-    }
 
-    // Function to update date and time in the top-bar
-    function updateDateTime() {
-        const now = new Date();
-        const dateOptions = {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        };
-        const timeOptions = {
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hour12: true
-        };
+        updateGalleryTitle();
 
-        const dateString = now.toLocaleDateString('bn-BD', dateOptions);
-        const timeString = now.toLocaleTimeString('en-US', timeOptions);
+        function toggleDetails() {
+            const shortText = document.querySelector('.short-text');
+            const fullText = document.querySelector('.full-text');
+            const button = document.querySelector('.see-details');
+            
+            if (fullText.style.display === 'none' || fullText.style.display === '') {
+                shortText.style.display = 'none';
+                fullText.style.display = 'block';
+                button.textContent = 'Hide Details';
+            } else {
+                shortText.style.display = 'block';
+                fullText.style.display = 'none';
+                button.textContent = 'See Details';
+            }
+        }
+
+        // Function to update date and time in the top-bar (redundant but kept for completeness)
+        function updateDateTime() {
+            const now = new Date();
+            const dateOptions = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+            const timeOptions = {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+
+            const dateString = now.toLocaleDateString('bn-BD', dateOptions);
+            const timeString = now.toLocaleTimeString('en-US', timeOptions);
+            
+            document.getElementById('datetime').textContent = dateString + ', ' + timeString;
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
         
-        document.getElementById('datetime').textContent = dateString + ', ' + timeString;
-    }
-
-    setInterval(updateDateTime, 1000);
-    updateDateTime();
-    
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
-
-         
